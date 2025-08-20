@@ -11,10 +11,10 @@ public class Livro {
 
     private String titulo;
 
-    private String idioma; // ex: "pt", "en", "fr", "es" (uso de maiúscula/minúscula fica a gosto)
+    private String idioma;
     private Integer downloads;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Autor autor;
 
     public Livro() {}

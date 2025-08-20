@@ -27,9 +27,7 @@ public class LiteraluraApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Criamos o Principal passando os serviços e repositórios do Spring
         Principal principal = new Principal(gutendexService, autorRepository, livroRepository);
-        // Chamamos o menu no console
         principal.executarMenu();
     }
 }

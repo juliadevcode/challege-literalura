@@ -12,10 +12,10 @@ public class Autor {
     private Long id;
 
     private String nome;
-    private Integer anoNascimento; // pode ser null
-    private Integer anoFalecimento; // pode ser null
+    private Integer anoNascimento; 
+    private Integer anoFalecimento;
 
-    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Livro> livros = new ArrayList<>();
 
     public Autor() {}
